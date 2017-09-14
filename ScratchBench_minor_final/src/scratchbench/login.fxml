@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="656.999977929685" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="scratchbench.loginController">
+  <children>
+    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="294.0" prefWidth="657.0">
+      <children>
+        <VBox prefHeight="294.0" prefWidth="657.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <AnchorPane prefHeight="294.0" prefWidth="657.0">
+              <children>
+                <Label layoutX="14.0" layoutY="25.0" text="" textFill="WHITE">
+                  <font>
+                    <Font name="Aharoni Bold" size="12.0" />
+                  </font>
+                </Label>
+                <Label focusTraversable="false" layoutX="23.0" layoutY="23.0" prefHeight="29.0" prefWidth="288.5" text="Set up your bench the first time">
+                  <font>
+                    <Font size="20.0" />
+                  </font>
+                </Label>
+                <Label layoutX="430.0" layoutY="33.0" text="or">
+                  <font>
+                    <Font size="14.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Text fx:id="text" fill="#3354ff" font="$x1" layoutX="447.0" layoutY="48.0" onMouseClicked="#gotoSignIn" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hyperlink" text="sign in" />
+                <TextField fx:id="nameTF" layoutX="23.0" layoutY="80.0" onAction="#gotoRegister" onKeyTyped="#nameTyped" prefHeight="29.0" prefWidth="215.0" promptText="Name" />
+                <TextField fx:id="emailTF" disable="true" layoutX="23.0" layoutY="118.0" prefHeight="29.0" prefWidth="215.0" promptText="Email" />
+                <PasswordField fx:id="passwordTF" layoutX="23.0" layoutY="154.0" onAction="#gotoRegister" onKeyTyped="#passwordTyped" prefHeight="29.0" prefWidth="215.0" promptText="New Password to your Bench" />
+                <Label fx:id="nameError" layoutX="245.0" layoutY="87.0" prefWidth="153.0" text="">
+                  <textFill>
+                    <Color blue="0.200" green="0.200" red="1.000" fx:id="x2" />
+                  </textFill>
+                </Label>
+                <Label id="checkLabel" fx:id="passwordError" layoutX="252.0" layoutY="161.0" prefWidth="153.0" text="" textFill="$x2" />
+                <CheckBox fx:id="agreeBox" layoutX="23.0" layoutY="203.0" mnemonicParsing="false" onAction="#setTrue" onMouseClicked="#setTrue" text="I agree with" />
+                <Text fill="#0029ff" layoutX="108.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hyperlink" text="Scratch|Bench" />
+                <Label fx:id="label" layoutX="184.0" layoutY="203.0" text="" />
+                <Label fx:id="checkLabel" layoutX="23.0" layoutY="225.0" prefWidth="153.0" text="" textFill="$x2" />
+                <Button id="loginButton" blendMode="DARKEN" cancelButton="false" defaultButton="true" layoutX="278.0" layoutY="190.0" mnemonicParsing="false" onAction="#gotoRegister" prefHeight="43.0" prefWidth="136.0" style=".button" text="Register">
+                  <font>
+                    <Font name="Cambria Math" size="25.0" />
+                  </font>
+                  <stylesheets>
+                    <URL value="@Login.css" />
+                  </stylesheets>
+                </Button>
+              </children>
+            </AnchorPane>
+          </children>
+        </VBox>
+      </children>
+    </AnchorPane>
+    <Line endX="507.0" endY="0.0" layoutX="129.0" layoutY="307.0" startX="-100.0" />
+  </children>
+  <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>
