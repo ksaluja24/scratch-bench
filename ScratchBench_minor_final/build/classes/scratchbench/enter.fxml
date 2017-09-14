@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="642.999977929685" snapToPixel="true" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="scratchbench.enterController">
+  <children>
+    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="294.0" prefWidth="657.0">
+      <children>
+        <VBox prefHeight="294.0" prefWidth="657.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <AnchorPane prefHeight="294.0" prefWidth="657.0">
+              <children>
+                <Button fx:id="loginButton" blendMode="DARKEN" cancelButton="false" defaultButton="true" layoutX="256.0" layoutY="212.0" mnemonicParsing="false" onAction="#processLogin" prefHeight="43.0" prefWidth="145.0" style=".button" text="Proceed">
+                  <font>
+                    <Font name="Cambria Math" size="25.0" />
+                  </font>
+                  <stylesheets>
+                    <URL value="@Login.css" />
+                  </stylesheets>
+                </Button>
+                <Text blendMode="COLOR_BURN" fill="#202020" fontSmoothingType="LCD" layoutX="26.0" layoutY="44.0" stroke="TRANSPARENT" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your password">
+                  <font>
+                    <Font size="20.0" fx:id="x1" />
+                  </font>
+                </Text>
+                <Label layoutX="564.0" layoutY="278.0" onMouseClicked="#gotoSignIn" text="" />
+                <PasswordField fx:id="passwordField" layoutX="147.0" layoutY="137.0" onAction="#processLogin" prefHeight="54.0" prefWidth="334.0" promptText="Password" />
+                <Label fx:id="emailLabel" font="$x1" layoutX="147.0" layoutY="60.0" prefHeight="54.0" prefWidth="334.0" text="" />
+                <Text fx:id="cancelLabel" fill="#0029ff" layoutX="468.0" layoutY="294.0" onMouseClicked="#gotoSignIn" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="hyperlink" text="">
+                  <font>
+                    <Font size="14.0" fx:id="x2" />
+                  </font>
+                </Text>
+                <Label fx:id="messageLabel" layoutX="147.0" layoutY="114.0" prefWidth="334.0" text="" textFill="#0052cc" />
+                <Label fx:id="errorLabel" font="$x2" layoutX="499.0" layoutY="149.0" text="" textFill="RED" />
+              </children>
+            </AnchorPane>
+          </children>
+        </VBox>
+      </children>
+    </AnchorPane>
+    <Line endX="507.0" endY="0.0" layoutX="125.0" layoutY="325.0" startX="-100.0" />
+  </children>
+  <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>
